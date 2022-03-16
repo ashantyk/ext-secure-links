@@ -1,6 +1,6 @@
 {
   "name": "ext-secure-links",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "EXT - Secure Links",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "url": "https://github.com/ashantyk/ext-secure-links"
   },
   "engines": {
-    "node": ">= 8.0.0"
+    "node": ">= 10.0.0"
   },
   "dependencies": {},
   "devDependencies": {

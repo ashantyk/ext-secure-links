@@ -1,0 +1,6 @@
+.travis.yml
+.coveralls.yml
+coverage/*
+.idea/*
+test/*
+node_modules/*
