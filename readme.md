@@ -2,7 +2,7 @@
 [![NPM](https://nodei.co/npm/ext-secure-links.png)](https://nodei.co/npm/ext-secure-links/)
 
 [![npm version](https://badge.fury.io/js/ext-secure-links.svg)](https://badge.fury.io/js/ext-secure-links)
-[![Build Status](https://travis-ci.org/ashantyk/ext-secure-links.svg?branch=master)](https://travis-ci.org/ashantyk/ext-secure-links)
+[![Build Status](https://travis-ci.com/ashantyk/ext-secure-links.svg?branch=master)](https://travis-ci.org/ashantyk/ext-secure-links)
 [![Coverage Status](https://coveralls.io/repos/github/ashantyk/ext-secure-links/badge.svg?branch=master)](https://coveralls.io/github/ashantyk/ext-secure-links?branch=master)
 
 ## Features
