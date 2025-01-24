@@ -1,1 +1,1 @@
-module.exports = require("./lib/secureLinks.js");
+export { validate, validateRaw, generate } from './lib/secureLinks.js';

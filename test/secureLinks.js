@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const secureLinks = require('../index.js');
+import { expect } from 'chai';
+import { validate, validateRaw, generate } from './../index.js';
 
 describe('SecureLinks', () => {
 
@@ -18,7 +18,7 @@ describe('SecureLinks', () => {
         positiveTests.forEach(function (test) {
             it('should return valid relative url for: ' + JSON.stringify(test), function () {
 
-                let url = secureLinks.generate(test.url, test.secret, test.ttl);
+                let url = generate(test.url, test.secret, test.ttl);
                 let isValidSecureUrl = /^(\/|\/\/)([a-z0-9\s_@\-^!#$%&+={}\[\]\.\/]+)\?h=([a-z0-9]+)\&e=([0-9]+)$/i.test(url); // todo: improve regex pattern
                 expect(isValidSecureUrl).to.equal(true, "invalid generated url: " + url);
 
@@ -38,7 +38,7 @@ describe('SecureLinks', () => {
 
         positiveTests.forEach(function (testUrl) {
             it('should return TRUE for: ' + testUrl, function () {
-                let isValid = secureLinks.validate(testUrl, secret);
+                let isValid = validate(testUrl, secret);
                 expect(isValid).to.equal(true);
             });
         });
@@ -52,7 +52,7 @@ describe('SecureLinks', () => {
 
         negativeTests.forEach(function (testUrl) {
             it('should return FALSE for: ' + testUrl, function () {
-                let isValid = secureLinks.validate(testUrl, secret);
+                let isValid = validate(testUrl, secret);
                 expect(isValid).to.equal(false);
             });
         });

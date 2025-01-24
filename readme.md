@@ -21,15 +21,15 @@ npm install ext-secure-links --save
 Use it like this
 
 ```js
+import { generate, validate } from 'ext-secure-links';
+
 let path = "/some/url/with/someId/275273592";
 let secret = "some_secret_token";
 let ttl = 3600; // 1h
 
-const SecureLinks = require('ext-secure-links');
-
-let secureLink = SecureLinks.generate(path, secret, ttl);
+let secureLink = generate(path, secret, ttl);
 console.log(secureLink); // prints '/some/url/with/someId/275273592?h=bff149a0b87f5b0e00d9dd364e9ddaa0&e=1538299376'
 
-let isValid = SecureLinks.validate(path, secret);
+let isValid = validate(path, secret);
 console.log(isValid); // prints 'true'
 ```
